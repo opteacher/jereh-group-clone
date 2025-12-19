@@ -1,0 +1,21 @@
+{
+  "header": {
+    "dispTitle": "DISPLAY",
+    "display": {
+      "projects": "Projects",
+      "technology": "Technology",
+      "products": "Products",
+      "dashboard": "Dashboard"
+    },
+    "busnsTitle": "BUSINESS",
+    "business": {
+      "em": "Environmental Management",
+      "gc": "Green Cleaning",
+      "ru": "Resource Use"
+    },
+    "products": "PRODUCTS",
+    "examples": "EXAMPLES",
+    "news": "NEWS",
+    "organ": "ORGANIZATION"
+  }
+}

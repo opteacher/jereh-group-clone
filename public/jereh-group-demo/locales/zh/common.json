@@ -1,0 +1,21 @@
+{
+  "header": {
+    "dispTitle": "展示",
+    "display": {
+      "projects": "典型项目",
+      "technology": "核心技术",
+      "products": "样板产品",
+      "dashboard": "实时看板"
+    },
+    "busnsTitle": "业务领域",
+    "business": {
+      "em": "环境治理",
+      "gc": "绿色清洁",
+      "ru": "资源利用"
+    },
+    "products": "产品中心",
+    "examples": "样板工程",
+    "news": "最新动态",
+    "organ": "组织结构"
+  }
+}
