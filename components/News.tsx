@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Calendar } from 'lucide-react'
 import ScrollReveal from 'scrollreveal'
+import { useTranslation } from 'react-i18next'
 
 const newsItems = [
   {
@@ -24,6 +25,8 @@ const newsItems = [
 ]
 
 const News: React.FC = () => {
+  const { t } = useTranslation('home')
+  
   useEffect(() => {
     ScrollReveal().reveal('.news-card', { interval: 500, duration: 800, scale: 0.85 })
   })
@@ -34,15 +37,15 @@ const News: React.FC = () => {
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 className="text-jereh-red font-bold text-sm uppercase tracking-widest mb-3">
-              News Center
+              {t("news.title")}
             </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Latest Updates</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">{t("news.latestUpdates")}</h3>
           </div>
           <a
             href="#"
             className="hidden md:block px-6 py-2 border border-gray-300 text-gray-700 font-medium hover:bg-jereh-red hover:text-white hover:border-jereh-red transition-all"
           >
-            View All News
+            {t("news.viewAllNews")}
           </a>
         </div>
 

@@ -1,13 +1,15 @@
 import React from 'react';
-
-const stats = [
-  { id: 1, value: '1999', label: 'Founded In' },
-  { id: 2, value: '70+', label: 'Countries & Regions' },
-  { id: 3, value: '5000+', label: 'Global Employees' },
-  { id: 4, value: '002353', label: 'Stock Code (SZ)' },
-];
+import { useTranslation } from 'react-i18next'
 
 const Stats: React.FC = () => {
+  const { t } = useTranslation('home');
+
+  const stats = [
+    { id: 1, value: '1999', label: t('statistic.total') },
+    { id: 2, value: '70+', label: t('statistic.place') },
+    { id: 3, value: '5000+', label: t('statistic.employees') },
+    { id: 4, value: '002353', label: t('statistic.stockCode') },
+  ];
   return (
     <div className="bg-jereh-dark py-16 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

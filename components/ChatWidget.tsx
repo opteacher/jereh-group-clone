@@ -10,7 +10,7 @@ interface Message {
 const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: 'Hello! I am the Jereh AI Assistant. How can I help you learn about our solutions or company today?' }
+    { role: 'model', text: 'Hello! I am the Lanke AI Assistant. How can I help you learn about our solutions or company today?' }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -61,7 +61,7 @@ const ChatWidget: React.FC = () => {
           <div className="bg-jereh-red p-4 flex justify-between items-center text-white">
             <div className="flex items-center gap-2">
               <Sparkles className="w-5 h-5" />
-              <span className="font-bold">Jereh Assistant</span>
+              <span className="font-bold">Lanke Assistant</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="hover:bg-white/20 rounded p-1 transition-colors">
               <X className="w-5 h-5" />
@@ -101,7 +101,7 @@ const ChatWidget: React.FC = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask about Jereh..."
+              placeholder="Ask about Lanke..."
               className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-jereh-red focus:ring-1 focus:ring-jereh-red"
             />
             <button 

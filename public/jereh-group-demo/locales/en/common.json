@@ -17,5 +17,32 @@
     "examples": "EXAMPLES",
     "news": "NEWS",
     "organ": "ORGANIZATION"
+  },
+  "footer": {
+    "introduction": {
+      "name": "Lanke",
+      "content": "Lanke Group is a global integrated solution provider in oil & gas, power, and environmental management, dedicated to helping customers succeed."
+    },
+    "quickLinks": {
+      "label": "Quick Links",
+      "aboutUs": "About Us",
+      "solutions": "Solutions",
+      "products": "Products",
+      "investorRelations": "Investor Relations",
+      "esg": "ESG"
+    },
+    "industries": {
+      "label": "Industries",
+      "oilGas": "Oil & Gas",
+      "power": "Power Services",
+      "envMgn": "Environmental Management",
+      "newEnergy": "New Energy"
+    },
+    "contactUs": {
+      "label": "Contact Us",
+      "address": "Jereh Global Headquarters, Laishan District, Yantai, China",
+      "phone": "+86-535-672-3000",
+      "email": "contact@jereh.com"
+    }
   }
 }

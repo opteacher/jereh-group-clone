@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { ArrowRight, Settings, Droplets, Zap, Truck, Leaf, Anchor } from 'lucide-react'
 import ScrollReveal from 'scrollreveal'
+import { useTranslation } from 'react-i18next'
 
 const solutions = [
   {
@@ -48,6 +49,8 @@ const solutions = [
 ]
 
 const Solutions: React.FC = () => {
+  const { t } = useTranslation('home')
+
   useEffect(() => {
     ScrollReveal().reveal('.solution-card', { interval: 500, duration: 800, scale: 0.85 })
   })
@@ -57,9 +60,9 @@ const Solutions: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-jereh-red font-bold text-sm uppercase tracking-widest mb-3">
-            Our Business
+            {t("solutions.subTitle")}
           </h2>
-          <h3 className="text-4xl font-bold text-gray-900">Comprehensive Solutions</h3>
+          <h3 className="text-4xl font-bold text-gray-900">{t("solutions.title")}</h3>
           <div className="w-24 h-1 bg-jereh-red mx-auto mt-6"></div>
         </div>
 
