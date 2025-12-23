@@ -21,7 +21,7 @@
   "footer": {
     "introduction": {
       "name": "Lanke",
-      "content": "兰克集团是全球领先的油气、电力及环境管理综合解决方案提供商，致力于助力客户取得成功。"
+      "content": "蓝科是全球领先的油气、电力及环境管理综合解决方案提供商，致力于助力客户取得成功。"
     },
     "quickLinks": {
       "label": "快捷链接",
@@ -40,9 +40,9 @@
     },
     "contactUs": {
       "label": "联系我们",
-      "address": "兰克全球总部，中国烟台市莱山区",
-      "phone": "+86-535-672-3000",
-      "email": "contact@lanke.com"
+      "address": "蓝科上海总部，上海市嘉定区江桥镇天启路201号蓝科虹桥中心（邮编：201803）",
+      "phone": "+86 021-68536661",
+      "email": "Sales@lankepec.com"
     }
   }
 }
