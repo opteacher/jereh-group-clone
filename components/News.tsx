@@ -2,34 +2,49 @@ import React, { useEffect } from 'react'
 import { Calendar } from 'lucide-react'
 import ScrollReveal from 'scrollreveal'
 import { useTranslation } from 'react-i18next'
+import News from '@/types/news'
 
-const newsItems = [
-  {
-    date: 'Oct 24, 2023',
-    title: 'Jereh Unveils GreenWell Distributed Hazardous Waste Treatment Solution',
-    category: 'Products',
-    image: 'https://picsum.photos/400/250?random=10'
-  },
-  {
-    date: 'Sep 15, 2023',
-    title: 'Jereh Group Shines at ADIPEC 2023 with Low-Carbon Solutions',
-    category: 'Exhibitions',
-    image: 'https://picsum.photos/400/250?random=11'
-  },
-  {
-    date: 'Aug 02, 2023',
-    title: 'Jereh Successfully Delivers New Batch of CTUs to Middle East',
-    category: 'Projects',
-    image: 'https://picsum.photos/400/250?random=12'
-  }
-]
+// const newsItems = [
+//   {
+//     date: 'Oct 24, 2023',
+//     title: 'Jereh Unveils GreenWell Distributed Hazardous Waste Treatment Solution',
+//     category: 'Products',
+//     image: 'https://picsum.photos/400/250?random=10'
+//   },
+//   {
+//     date: 'Sep 15, 2023',
+//     title: 'Jereh Group Shines at ADIPEC 2023 with Low-Carbon Solutions',
+//     category: 'Exhibitions',
+//     image: 'https://picsum.photos/400/250?random=11'
+//   },
+//   {
+//     date: 'Aug 02, 2023',
+//     title: 'Jereh Successfully Delivers New Batch of CTUs to Middle East',
+//     category: 'Projects',
+//     image: 'https://picsum.photos/400/250?random=12'
+//   }
+// ]
 
-const News: React.FC = () => {
+const Newss: React.FC = () => {
   const { t } = useTranslation('home')
-  
+  const [newsItems, setNewsItems] = React.useState<News[]>([])
+
   useEffect(() => {
-    ScrollReveal().reveal('.news-card', { interval: 500, duration: 800, scale: 0.85 })
-  })
+    fetch('http://192.168.1.11:4009/lanke/mdl/v1/news/s')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.json()
+      })
+      .then(data => {
+        setNewsItems(data.data)
+        ScrollReveal().reveal('.news-card', { interval: 500, duration: 800, scale: 0.85 })
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error)
+      })
+  }, [])
 
   return (
     <section className="py-24 bg-white">
@@ -54,7 +69,7 @@ const News: React.FC = () => {
             <div key={index} className="news-card invisible group cursor-pointer">
               <div className="relative overflow-hidden rounded-md mb-6">
                 <img
-                  src={item.image}
+                  src={item.post}
                   alt={item.title}
                   className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
@@ -64,7 +79,7 @@ const News: React.FC = () => {
               </div>
               <div className="flex items-center text-gray-500 text-sm mb-3 space-x-2">
                 <Calendar className="w-4 h-4" />
-                <span>{item.date}</span>
+                <span>{item.datetime.toString()}</span>
               </div>
               <h4 className="text-xl font-bold text-gray-900 leading-snug group-hover:text-jereh-red transition-colors line-clamp-2">
                 {item.title}
@@ -82,7 +97,7 @@ const News: React.FC = () => {
             href="#"
             className="inline-block px-8 py-3 border border-gray-300 text-gray-700 font-medium hover:bg-jereh-red hover:text-white transition-all"
           >
-            View All News
+            {t("news.viewAllNews")}
           </a>
         </div>
       </div>
@@ -90,4 +105,4 @@ const News: React.FC = () => {
   )
 }
 
-export default News
+export default Newss

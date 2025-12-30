@@ -14,7 +14,9 @@
   },
   "solutions": {
     "subTitle": "我们的业务",
-    "title": "综合解决方案"
+    "title": "综合解决方案",
+    "learnMore": "了解更多",
+    "viewDetails": "查看详情"
   },
   "news": {
     "title": "新闻资讯",

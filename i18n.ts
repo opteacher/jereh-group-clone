@@ -19,7 +19,7 @@ i18n
     },
     backend: {
       loadPath: `.${
-        process.env.NODE_ENV === 'development' ? '/jereh-group-demo' : ''
+        process.env.NODE_ENV === 'development' ? '/lankesite-demo' : ''
       }/locales/{{lng}}/{{ns}}.json` // 翻译文件路径
     }
   })

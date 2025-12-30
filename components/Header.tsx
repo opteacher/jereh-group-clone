@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             <img
               className="w-48"
               alt="Lanke"
-              src={`.${process.env.NODE_ENV === 'development' ? '/jereh-group-demo' : ''}/logo.svg`}
+              src={`.${process.env.NODE_ENV === 'development' ? '/lankesite-demo' : ''}/logo.svg`}
             />
           </div>
 
