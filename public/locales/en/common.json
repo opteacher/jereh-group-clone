@@ -1,0 +1,48 @@
+{
+  "header": {
+    "dispTitle": "DISPLAY",
+    "display": {
+      "projects": "Projects",
+      "technology": "Technology",
+      "products": "Products",
+      "dashboard": "Dashboard"
+    },
+    "busnsTitle": "BUSINESS",
+    "business": {
+      "em": "Environmental Management",
+      "gc": "Green Cleaning",
+      "ru": "Resource Use"
+    },
+    "products": "PRODUCTS",
+    "examples": "EXAMPLES",
+    "news": "NEWS",
+    "organ": "ORGANIZATION"
+  },
+  "footer": {
+    "introduction": {
+      "name": "Lanke",
+      "content": "Lanke Group is a global integrated solution provider in oil & gas, power, and environmental management, dedicated to helping customers succeed."
+    },
+    "quickLinks": {
+      "label": "Quick Links",
+      "aboutUs": "About Us",
+      "solutions": "Solutions",
+      "products": "Products",
+      "investorRelations": "Investor Relations",
+      "esg": "ESG"
+    },
+    "industries": {
+      "label": "Industries",
+      "oilGas": "Oil & Gas",
+      "power": "Power Services",
+      "envMgn": "Environmental Management",
+      "newEnergy": "New Energy"
+    },
+    "contactUs": {
+      "label": "Contact Us",
+      "address": "Lanke Shanghai Headquarters, No. 201 Tianqi Road, Jiangqiao Town, Jiading District, Shanghai (post code: 201803)",
+      "phone": "+86 021-68536661",
+      "email": "Sales@lankepec.com"
+    }
+  }
+}

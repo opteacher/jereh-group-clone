@@ -50,11 +50,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.location.reload()}>
             {/* Simple Logo Placeholder */}
-            <img
-              className="w-48"
-              alt="Lanke"
-              src={`.${process.env.NODE_ENV === 'development' ? '/lankesite-demo' : ''}/logo.svg`}
-            />
+            <img className="w-48" alt="Lanke" src="./logo.svg" />
           </div>
 
           {/* Desktop Nav */}

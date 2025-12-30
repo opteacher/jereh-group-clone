@@ -18,9 +18,7 @@ i18n
       caches: ['cookie', 'localStorage']
     },
     backend: {
-      loadPath: `.${
-        process.env.NODE_ENV === 'development' ? '/lankesite-demo' : ''
-      }/locales/{{lng}}/{{ns}}.json` // 翻译文件路径
+      loadPath: './locales/{{lng}}/{{ns}}.json'
     }
   })
 

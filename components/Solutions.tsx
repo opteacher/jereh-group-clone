@@ -23,7 +23,9 @@ const Solutions: React.FC = () => {
         console.error('There was a problem with the fetch operation:', error)
       })
       .finally(() => {
-        ScrollReveal().reveal('.solution-card', { interval: 500, duration: 800, scale: 0.85 })
+        setTimeout(() => {
+          ScrollReveal().reveal('.solution-card', { interval: 500, duration: 800, scale: 0.85 })
+        }, 500)
       })
   }, [])
 
@@ -42,11 +44,11 @@ const Solutions: React.FC = () => {
           {solutions.map((item, index) => (
             <div
               key={index}
-              className="solution-card group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-100"
+              className="solution-card invisible group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-100"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={`.${process.env.NODE_ENV === 'development' ? '/lankesite-demo' : ''}${item.post}`}
+                  src={'.' + item.post}
                   alt={item.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
