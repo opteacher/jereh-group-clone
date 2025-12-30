@@ -18,10 +18,12 @@ const Newss: React.FC = () => {
       })
       .then(data => {
         setNewsItems(data.data)
-        ScrollReveal().reveal('.news-card', { interval: 500, duration: 800, scale: 0.85 })
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error)
+      })
+      .finally(() => {
+        ScrollReveal().reveal('.news-card', { interval: 500, duration: 800, scale: 0.85 })
       })
   }, [])
 
@@ -45,10 +47,10 @@ const Newss: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newsItems.map((item, index) => (
-            <div key={index} className="news-card invisible group cursor-pointer">
+            <div key={index} className="news-card group cursor-pointer">
               <div className="relative overflow-hidden rounded-md mb-6">
                 <img
-                  src={item.post}
+                  src={`.${process.env.NODE_ENV === 'development' ? '/lankesite-demo' : ''}${item.post}`}
                   alt={item.title}
                   className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
