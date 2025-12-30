@@ -9,7 +9,7 @@ const Solutions: React.FC = () => {
   const [solutions, setSolutions] = React.useState<Solution[]>([])
 
   useEffect(() => {
-    fetch('http://192.168.1.11:4009/lanke/mdl/v1/solution/s')
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/lanke/mdl/v1/solution/s`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')

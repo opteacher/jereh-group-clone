@@ -3,6 +3,7 @@ export default class News {
   category: string
   datetime: Date
   title: string
+  desc: string
   lang: 'en' | 'zh'
 
   constructor() {
@@ -10,6 +11,7 @@ export default class News {
     this.category = ''
     this.datetime = new Date()
     this.title = ''
+    this.desc = ''
     this.lang = 'en'
   }
 }

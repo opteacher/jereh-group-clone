@@ -4,33 +4,12 @@ import ScrollReveal from 'scrollreveal'
 import { useTranslation } from 'react-i18next'
 import News from '@/types/news'
 
-// const newsItems = [
-//   {
-//     date: 'Oct 24, 2023',
-//     title: 'Jereh Unveils GreenWell Distributed Hazardous Waste Treatment Solution',
-//     category: 'Products',
-//     image: 'https://picsum.photos/400/250?random=10'
-//   },
-//   {
-//     date: 'Sep 15, 2023',
-//     title: 'Jereh Group Shines at ADIPEC 2023 with Low-Carbon Solutions',
-//     category: 'Exhibitions',
-//     image: 'https://picsum.photos/400/250?random=11'
-//   },
-//   {
-//     date: 'Aug 02, 2023',
-//     title: 'Jereh Successfully Delivers New Batch of CTUs to Middle East',
-//     category: 'Projects',
-//     image: 'https://picsum.photos/400/250?random=12'
-//   }
-// ]
-
 const Newss: React.FC = () => {
   const { t } = useTranslation('home')
   const [newsItems, setNewsItems] = React.useState<News[]>([])
 
   useEffect(() => {
-    fetch('http://192.168.1.11:4009/lanke/mdl/v1/news/s')
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/lanke/mdl/v1/news/s`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -85,8 +64,7 @@ const Newss: React.FC = () => {
                 {item.title}
               </h4>
               <p className="mt-3 text-gray-600 line-clamp-3">
-                Read more about how Jereh is leading the industry with innovative solutions and
-                successful project deliveries globally.
+                {item.desc}
               </p>
             </div>
           ))}
