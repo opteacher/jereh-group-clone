@@ -23,9 +23,13 @@ const Solutions: React.FC = () => {
         console.error('There was a problem with the fetch operation:', error)
       })
       .finally(() => {
-        setTimeout(() => {
+        if (import.meta.env.PROD) {
+          setTimeout(() => {
+            ScrollReveal().reveal('.solution-card', { interval: 500, duration: 800, scale: 0.85 })
+          }, 500)
+        } else {
           ScrollReveal().reveal('.solution-card', { interval: 500, duration: 800, scale: 0.85 })
-        }, 500)
+        }
       })
   }, [])
 
@@ -46,9 +50,9 @@ const Solutions: React.FC = () => {
               key={index}
               className="solution-card invisible group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-100"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden cursor-pointer">
                 <img
-                  src={'.' + item.post}
+                  src={item.post}
                   alt={item.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -62,10 +66,10 @@ const Solutions: React.FC = () => {
                 <div className="text-jereh-red mb-4 group-hover:scale-110 transition-transform origin-left duration-300">
                   {createElement(Icons[item.icon], { className: 'w-10 h-10' })}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-jereh-red transition-colors">
+                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-jereh-red transition-colors cursor-pointer">
                   {item.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1">{item.desc}</p>
+                <p className="text-gray-600 leading-relaxed mb-6 flex-1 line-clamp-3 cursor-pointer">{item.desc}</p>
                 <div className="pt-4 border-t border-gray-100">
                   <a
                     href="#"

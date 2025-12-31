@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
       {/* Background Image/Video Placeholder */}
       <div className="absolute inset-0">
         <img
-          src="https://picsum.photos/1920/1080?grayscale&blur=2"
+          src="./images/微信图片_20251224135434_117_433.png"
           alt="Industrial Background"
           className="w-full h-full object-cover opacity-60"
         />
